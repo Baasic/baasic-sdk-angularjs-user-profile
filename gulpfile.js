@@ -1,0 +1,40 @@
+/* jshint node: true */
+'use strict';
+var docgen = require('baasic-javascript-docgen');
+
+var gulp = require('gulp'),
+	plugins = require('gulp-load-plugins')(),
+	stylish = require('jshint-stylish');
+
+var paths = {
+  scripts: ['src/**/*.js']
+};
+
+gulp.task('jshint', function () {
+  return gulp.src([
+    'gulpfile.js'
+	]
+	.concat(paths.scripts))
+    .pipe(plugins.jshint())
+	.pipe(plugins.jshint.reporter(stylish));
+});
+
+gulp.task('scripts', function() {
+  return gulp.src(paths.scripts)
+    .pipe(plugins.order(['*.moduleDefinition.js', '*.js']))
+	.pipe(plugins.concat('baasic-angular-user-profile.js'))
+	.pipe(plugins.header('(function (angular, undefined) {\n'))
+	.pipe(plugins.footer('\n})(angular);'))
+	.pipe(plugins.beautify())
+	.pipe(gulp.dest('dist'))
+	.pipe(plugins.uglify())
+	.pipe(plugins.rename('baasic-angular-user-profile.min.js'))
+	.pipe(gulp.dest('dist'));
+});
+
+gulp.task('docs', function() {
+  docgen.generateBaasicDocs('src', 'wiki', 'Baasic User Profile Navigation', ['config.js'], ['home.md']);
+});
+
+
+gulp.task('default', ['jshint', 'docs', 'scripts']);

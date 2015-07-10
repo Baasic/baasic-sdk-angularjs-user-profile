@@ -1,0 +1,33 @@
+{
+  "name": "baasic-angularjs-user-profile",
+  "version": "0.2.3",
+  "description": "Baasic AngularJS SDK user profile modules and services.",
+  "keywords": [
+    "angularjs",
+    "baasic",
+	"settings",
+    "backend"
+  ],
+  "license": "MIT",
+  "main": "dist/baasic-angular-user-profile.js",
+  "ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests",
+        "src",
+        "spec",
+		"NuGet",
+		"lib",
+        "bower.json",
+        "gulpfile.js",
+        "package.json",
+        "README.md"
+    ],
+  "devDependencies": {
+  },
+  "dependencies": {
+	"baasic-angularjs-core": "baasic/baasic-sdk-angularjs-core"
+  }
+}
