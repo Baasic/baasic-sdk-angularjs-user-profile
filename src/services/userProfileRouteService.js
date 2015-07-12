@@ -36,7 +36,55 @@
                 * @method
                 * @example baasicUserProfileRouteService.parse('<route>/{?embed,fields,options}').expand({embed: '<embedded-resource>'});
                 **/  				
-                parse: uriTemplateService.parse
+                parse: uriTemplateService.parse,
+                acl: {
+					/**
+					* Parses get user profile acl route; this URI template should be expanded with the Id of the user profile.					
+					* @method acl.get       
+					* @example 
+baasicUserProfileRouteService.acl.get.expand(
+	{id: '<profile-id>'}
+);
+					**/ 				
+                    get: uriTemplateService.parse('profiles/{id}/acl/{?fields}'),
+					/**
+					* Parses update user profile acl route; this URI template should be expanded with the Id of the user profile.					
+					* @method acl.update       
+					* @example 
+baasicUserProfileRouteService.acl.update.expand(
+	{id: '<profile-id>'}
+);
+					**/ 					
+                    update: uriTemplateService.parse('profiles/{id}/acl/{?fields}'),
+					/**
+					* Parses deleteByUser user profile acl route which can be expanded with additional options. Supported items are:
+					* - `id` - Id of the user profile.
+					* - `accessAction` - Action abbreviation which identifies ACL policy assigned to the specified user and user profile resource.
+					* - `user` - A value which uniquely identifies user for which ACL policy needs to be removed.					
+					* @method acl.deleteByUser       
+					* @example 
+baasicUserProfileRouteService.acl.deleteByUser.expand({
+    id: '<profile-id>', 
+    accessAction: '<access-action>', 
+    user: '<username>'
+});
+					**/ 					
+                    deleteByUser: uriTemplateService.parse('profiles/{id}/acl/actions/{accessAction}/users/{user}/'),
+					/**
+					* Parses deleteByUser user profile acl route which can be expanded with additional options. Supported items are:
+					* - `id` - Id of the user profile.
+					* - `accessAction` - Action abbreviation which identifies ACL policy assigned to the specified role and user profile resource.
+					* - `role` - A value which uniquely identifies role for which ACL policy needs to be removed.					
+					* @method acl.deleteByRole       
+					* @example 
+baasicUserProfileRouteService.acl.deleteByRole.expand({
+    id: '<profile-id>', 
+    accessAction: '<access-action>', 
+    role: '<role-name>'
+});
+					**/ 					
+                    deleteByRole: uriTemplateService.parse('profiles/{id}/acl/actions/{accessAction}/roles/{role}/')
+                }
             };
         }]);
 }(angular, module));

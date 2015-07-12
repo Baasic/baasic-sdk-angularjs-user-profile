@@ -22,13 +22,13 @@ gulp.task('jshint', function () {
 gulp.task('scripts', function() {
   return gulp.src(paths.scripts)
     .pipe(plugins.order(['*.moduleDefinition.js', '*.js']))
-	.pipe(plugins.concat('baasic-angular-user-profile.js'))
+	.pipe(plugins.concat('baasic-angularjs-user-profile.js'))
 	.pipe(plugins.header('(function (angular, undefined) {\n'))
 	.pipe(plugins.footer('\n})(angular);'))
 	.pipe(plugins.beautify())
 	.pipe(gulp.dest('dist'))
 	.pipe(plugins.uglify())
-	.pipe(plugins.rename('baasic-angular-user-profile.min.js'))
+	.pipe(plugins.rename('baasic-angularjs-user-profile.min.js'))
 	.pipe(gulp.dest('dist'));
 });
 

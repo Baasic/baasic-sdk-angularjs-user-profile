@@ -9,7 +9,7 @@
     "backend"
   ],
   "license": "MIT",
-  "main": "dist/baasic-angular-user-profile.js",
+  "main": "dist/baasic-angularjs-user-profile.js",
   "ignore": [
 		"**/.*",
 		"node_modules",

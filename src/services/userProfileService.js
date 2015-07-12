@@ -111,7 +111,86 @@ baasicUserProfileService.remove(userProfile)
                 * @method        
                 * @example baasicUserProfileService.routeService.get.expand(expandObject);
                 **/  							    
-				routeService: userProfileRouteService
+				        routeService: userProfileRouteService,
+                acl: {
+                    /**
+                    * Returns a promise that is resolved once the get action has been performed. Success response returns a list of ACL policies established for the specified user profile resource.
+                    * @method acl.get       
+                    * @example 
+baasicUserProfileService.acl.get({id: '<profile-id>'})
+.success(function (data) {
+  // perform success action here
+})
+.error(function (response, status, headers, config) {
+  // perform error handling here
+});
+                    **/ 					
+                    get: function (options) {
+                        var params = angular.copy(options);
+                        return baasicApiHttp.get(userProfileRouteService.acl.get.expand(params));
+                    },
+                    /**
+                    * Returns a promise that is resolved once the update acl action has been performed, this action creates new ACL policy for the specified user profile resource.
+                    * @method acl.update      
+                    * @example 
+var options = {id : '<profile-id>'};
+var aclObj =  {
+ actionId: '<action-id'>,
+ roleId: '<roleId>',
+ userId: '<userId>'
+};
+options[baasicConstants.modelPropertyName] = aclObj;
+baasicUserProfileService.acl.update(options)
+.success(function (data) {
+  // perform success action here
+})
+.error(function (response, status, headers, config) {
+  // perform error handling here
+});
+				    **/							
+                    update: function (options) {
+                        var params = angular.copy(options);
+                        return baasicApiHttp.put(userProfileRouteService.acl.get.expand(params), params[baasicConstants.modelPropertyName]);
+                    },
+                    /**
+                    * Returns a promise that is resolved once the removeByUser action has been performed. This action deletes ACL policy assigned to the specified user and user profile resource.
+                    * @method acl.deleteByUser      
+                    * @example 
+baasicUserProfileService.acl.removeByUser('<profile-id>', '<access-action>', '<username>')
+.success(function (data) {
+  // perform success action here
+})
+.error(function (response, status, headers, config) {
+  // perform error handling here
+});
+				    **/						
+                    removeByUser: function (profileId, action, user, data) {
+                        var params = baasicApiService.removeParams(data);
+                        params.profileId = profileId;
+                        params.user = user;
+                        params.accessAction = action;
+                        return baasicApiHttp.delete(userProfileRouteService.acl.deleteByUser.expand(params));
+                    },
+                    /**
+                    * Returns a promise that is resolved once the removeByRole action has been performed. This action deletes ACL policy assigned to the specified role and user profile resource.
+                    * @method acl.deleteByRole      
+                    * @example 
+baasicUserProfileService.acl.removeByRole('<profile-id>', '<access-action>', '<role-name>')
+.success(function (data) {
+  // perform success action here
+})
+.error(function (response, status, headers, config) {
+  // perform error handling here
+});
+				    **/						
+                    removeByRole: function (profileId, action, role, data) {
+                        var params = baasicApiService.removeParams(data);
+                        params.profileId = profileId;
+                        params.role = role;
+                        params.accessAction = action;
+                        return baasicApiHttp.delete(userProfileRouteService.acl.deleteByRole.expand(params));
+                    }
+                }
             };
         }]);
 }(angular, module));
