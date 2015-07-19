@@ -24,7 +24,7 @@
                 * @method        
                 * @example baasicUserProfileRouteService.get.expand({});               
                 **/ 			
-                get: uriTemplateService.parse('profiles/{?embed,fields}'),
+                get: uriTemplateService.parse('profiles/{id}/{?embed,fields}'),
                 /**
                 * Parses create user profile route; this URI template does not expose any additional options.
                 * @method        

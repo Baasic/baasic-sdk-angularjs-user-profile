@@ -41,8 +41,8 @@ baasicUserProfileService.get()
   // perform error handling here
 });
                 **/  				
-                get: function (options) {
-                    return baasicApiHttp.get(userProfileRouteService.get.expand(baasicApiService.getParams(options)));
+                get: function (id, options) {
+                    return baasicApiHttp.get(userProfileRouteService.get.expand(baasicApiService.getParams(id, options)));
                 },
                  /**
                  * Returns a promise that is resolved once the create user profile action has been performed; this action creates a new user profile resource.
