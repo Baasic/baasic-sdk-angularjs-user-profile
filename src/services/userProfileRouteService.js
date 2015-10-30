@@ -18,7 +18,7 @@
                 * @method        
                 * @example baasicUserProfileRouteService.find.expand({searchQuery: '<search-phrase>'});               
                 **/  			
-                find: uriTemplateService.parse("profiles/{?searchQuery,page,rpp,sort,embed,fields}"),
+                find: uriTemplateService.parse('profiles/{?searchQuery,page,rpp,sort,embed,fields}'),
                 /**
                 * Parses get route; this route doesn't expose any properties.
                 * @method        
@@ -30,7 +30,7 @@
                 * @method        
                 * @example baasicUserProfileRouteService.create.expand({});              
                 **/  				
-                create: uriTemplateService.parse("profiles"),               	
+                create: uriTemplateService.parse('profiles'),               	
                 /**
                 * Parses and expands URI templates based on [RFC6570](http://tools.ietf.org/html/rfc6570) specifications. For more information please visit the project [GitHub](https://github.com/Baasic/uritemplate-js) page.
                 * @method
