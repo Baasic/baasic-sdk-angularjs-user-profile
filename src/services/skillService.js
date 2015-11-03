@@ -5,7 +5,7 @@
 */
 (function (angular, module, undefined) {
     'use strict';
-    module.service('baasickillService', ['baasicApiHttp', 'baasicApiService', 'baasicConstants', 'baasicSkillRouteService',
+    module.service('baasicSkillService', ['baasicApiHttp', 'baasicApiService', 'baasicConstants', 'baasicSkillRouteService',
         function (baasicApiHttp, baasicApiService, baasicConstants, skillRouteService) {
             return {
                  /**

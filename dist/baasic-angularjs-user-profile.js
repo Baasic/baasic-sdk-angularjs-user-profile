@@ -580,7 +580,7 @@
      */
     (function (angular, module, undefined) {
         'use strict';
-        module.service('baasickillService', ['baasicApiHttp', 'baasicApiService', 'baasicConstants', 'baasicSkillRouteService', function (baasicApiHttp, baasicApiService, baasicConstants, skillRouteService) {
+        module.service('baasicSkillService', ['baasicApiHttp', 'baasicApiService', 'baasicConstants', 'baasicSkillRouteService', function (baasicApiHttp, baasicApiService, baasicConstants, skillRouteService) {
             return {
                 /**
                  * Returns a promise that is resolved once the create skill action has been performed; this action creates a new skill resource.
