@@ -25,7 +25,7 @@ baasicUserEducationService.create({
 });
                 **/ 				
                 create: function (data) {
-                    return baasicApiHttp.post(userEducationRouteService.create.expand(), baasicApiService.createParams(data)[baasicConstants.modelPropertyName]);
+                    return baasicApiHttp.post(userEducationRouteService.create.expand(data), baasicApiService.createParams(data)[baasicConstants.modelPropertyName]);
                 },                
                 /**
                  * Returns a promise that is resolved once the find action has been performed. Success response returns a list of user education resources matching the given criteria.
