@@ -18,38 +18,38 @@
                 * @method        
                 * @example baasicOrganizationRouteService.find.expand({searchQuery: '<search-phrase>'});               
                 **/  			
-                find: uriTemplateService.parse('organizations/{?searchQuery,page,rpp,sort,embed,fields}'),
+                find: uriTemplateService.parse('lookups/organizations/{?searchQuery,page,rpp,sort,embed,fields}'),
                 /**
                 * Parses create route; this URI template does not expose any additional options.
                 * @method        
                 * @example baasicOrganizationRouteService.create.expand({});              
                 **/  				
-                create: uriTemplateService.parse('organizations'),
+                create: uriTemplateService.parse('lookups/organizations'),
                 /**
                 * Parses get route; this route doesn't expose any properties.
                 * @method        
                 * @example baasicOrganizationRouteService.get.expand({});               
                 **/ 			
-                get: uriTemplateService.parse('organizations/{id}/{?embed,fields}'),                   
+                get: uriTemplateService.parse('lookups/organizations/{id}/{?embed,fields}'),                   
                 batch:{
                     /**
                     * Parses create route; this URI template does not expose any additional options.
                     * @method batch.create       
                     * @example baasicOrganizationRouteService.batch.create.expand({});              
                     **/  				
-                    create: uriTemplateService.parse('organizations/batch'),
+                    create: uriTemplateService.parse('lookups/organizations/batch'),
                     /**
                     * Parses remove route; this must be expanded with a list of organization Ids which need to be removed.
                     * @method batch.remove       
                     * @example baasicOrganizationRouteService.batch.remove.expand({organizationIds: <organizationIds>);              
                     **/                      
-                    remove: uriTemplateService.parse('organizations/batch/{organizationIds}'),
+                    remove: uriTemplateService.parse('lookups/organizations/batch/{organizationIds}'),
                     /**
                     * Parses update route; this URI template does not expose any additional options.
                     * @method batch.update       
                     * @example baasicOrganizationRouteService.batch.create.expand({});              
                     **/                    
-                    update: uriTemplateService.parse('organizations/batch')
+                    update: uriTemplateService.parse('lookups/organizations/batch')
                 }   
             };
         }]);

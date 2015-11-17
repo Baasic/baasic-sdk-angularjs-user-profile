@@ -44,38 +44,38 @@
                  * @method        
                  * @example baasicCompanyRouteService.find.expand({searchQuery: '<search-phrase>'});               
                  **/
-                find: uriTemplateService.parse('companies/{?searchQuery,page,rpp,sort,embed,fields}'),
+                find: uriTemplateService.parse('lookups/companies/{?searchQuery,page,rpp,sort,embed,fields}'),
                 /**
                  * Parses create route; this URI template does not expose any additional options.
                  * @method        
                  * @example baasicCompanyRouteService.create.expand({});              
                  **/
-                create: uriTemplateService.parse('companies'),
+                create: uriTemplateService.parse('lookups/companies'),
                 /**
                  * Parses get route; this route doesn't expose any properties.
                  * @method        
                  * @example baasicCompanyRouteService.get.expand({});               
                  **/
-                get: uriTemplateService.parse('companies/{id}/{?embed,fields}'),
+                get: uriTemplateService.parse('lookups/companies/{id}/{?embed,fields}'),
                 batch: {
                     /**
                      * Parses create route; this URI template does not expose any additional options.
                      * @method batch.create       
                      * @example baasicCompanyRouteService.batch.create.expand({});              
                      **/
-                    create: uriTemplateService.parse('companies/batch'),
+                    create: uriTemplateService.parse('lookups/companies/batch'),
                     /**
                      * Parses remove route; this must be expanded with a list of company Ids which need to be removed.
                      * @method batch.remove       
                      * @example baasicCompanyRouteService.batch.remove.expand({companyIds: <companyIds>);              
                      **/
-                    remove: uriTemplateService.parse('companies/batch/{companyIds}'),
+                    remove: uriTemplateService.parse('lookups/companies/batch/{companyIds}'),
                     /**
                      * Parses update route; this URI template does not expose any additional options.
                      * @method batch.update       
                      * @example baasicCompanyRouteService.batch.create.expand({});              
                      **/
-                    update: uriTemplateService.parse('companies/batch')
+                    update: uriTemplateService.parse('lookups/companies/batch')
                 }
             };
         }]);
@@ -285,38 +285,38 @@
                  * @method        
                  * @example baasicOrganizationRouteService.find.expand({searchQuery: '<search-phrase>'});               
                  **/
-                find: uriTemplateService.parse('organizations/{?searchQuery,page,rpp,sort,embed,fields}'),
+                find: uriTemplateService.parse('lookups/organizations/{?searchQuery,page,rpp,sort,embed,fields}'),
                 /**
                  * Parses create route; this URI template does not expose any additional options.
                  * @method        
                  * @example baasicOrganizationRouteService.create.expand({});              
                  **/
-                create: uriTemplateService.parse('organizations'),
+                create: uriTemplateService.parse('lookups/organizations'),
                 /**
                  * Parses get route; this route doesn't expose any properties.
                  * @method        
                  * @example baasicOrganizationRouteService.get.expand({});               
                  **/
-                get: uriTemplateService.parse('organizations/{id}/{?embed,fields}'),
+                get: uriTemplateService.parse('lookups/organizations/{id}/{?embed,fields}'),
                 batch: {
                     /**
                      * Parses create route; this URI template does not expose any additional options.
                      * @method batch.create       
                      * @example baasicOrganizationRouteService.batch.create.expand({});              
                      **/
-                    create: uriTemplateService.parse('organizations/batch'),
+                    create: uriTemplateService.parse('lookups/organizations/batch'),
                     /**
                      * Parses remove route; this must be expanded with a list of organization Ids which need to be removed.
                      * @method batch.remove       
                      * @example baasicOrganizationRouteService.batch.remove.expand({organizationIds: <organizationIds>);              
                      **/
-                    remove: uriTemplateService.parse('organizations/batch/{organizationIds}'),
+                    remove: uriTemplateService.parse('lookups/organizations/batch/{organizationIds}'),
                     /**
                      * Parses update route; this URI template does not expose any additional options.
                      * @method batch.update       
                      * @example baasicOrganizationRouteService.batch.create.expand({});              
                      **/
-                    update: uriTemplateService.parse('organizations/batch')
+                    update: uriTemplateService.parse('lookups/organizations/batch')
                 }
             };
         }]);
@@ -526,38 +526,38 @@
                  * @method        
                  * @example baasicSkillRouteService.find.expand({searchQuery: '<search-phrase>'});               
                  **/
-                find: uriTemplateService.parse('skills/{?searchQuery,page,rpp,sort,embed,fields}'),
+                find: uriTemplateService.parse('profile/lookups/skills/{?searchQuery,page,rpp,sort,embed,fields}'),
                 /**
                  * Parses create route; this URI template does not expose any additional options.
                  * @method        
                  * @example baasicSkillRouteService.create.expand({});              
                  **/
-                create: uriTemplateService.parse('skills'),
+                create: uriTemplateService.parse('profile/lookups/skills'),
                 /**
                  * Parses get route; this route doesn't expose any properties.
                  * @method        
                  * @example baasicSkillRouteService.get.expand({});               
                  **/
-                get: uriTemplateService.parse('skills/{id}/{?embed,fields}'),
+                get: uriTemplateService.parse('profile/lookups/skills/{id}/{?embed,fields}'),
                 batch: {
                     /**
                      * Parses create route; this URI template does not expose any additional options.
                      * @method batch.create       
                      * @example baasicSkillRouteService.batch.create.expand({});              
                      **/
-                    create: uriTemplateService.parse('skills/batch'),
+                    create: uriTemplateService.parse('profile/lookups/skills/batch'),
                     /**
                      * Parses remove route; this must be expanded with a list of skill Ids which need to be removed.
                      * @method batch.remove       
                      * @example baasicSkillRouteService.batch.remove.expand({skillIds: <skillIds>);              
                      **/
-                    remove: uriTemplateService.parse('skills/batch/{skillIds}'),
+                    remove: uriTemplateService.parse('profile/lookups/skills/batch/{skillIds}'),
                     /**
                      * Parses update route; this URI template does not expose any additional options.
                      * @method batch.update       
                      * @example baasicSkillRouteService.batch.create.expand({});              
                      **/
-                    update: uriTemplateService.parse('skills/batch')
+                    update: uriTemplateService.parse('profile/lookups/skills/batch')
                 }
             };
         }]);

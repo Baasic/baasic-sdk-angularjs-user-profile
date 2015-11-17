@@ -18,38 +18,38 @@
                 * @method        
                 * @example baasicCompanyRouteService.find.expand({searchQuery: '<search-phrase>'});               
                 **/  			
-                find: uriTemplateService.parse('companies/{?searchQuery,page,rpp,sort,embed,fields}'),
+                find: uriTemplateService.parse('lookups/companies/{?searchQuery,page,rpp,sort,embed,fields}'),
                 /**
                 * Parses create route; this URI template does not expose any additional options.
                 * @method        
                 * @example baasicCompanyRouteService.create.expand({});              
                 **/  				
-                create: uriTemplateService.parse('companies'),
+                create: uriTemplateService.parse('lookups/companies'),
                 /**
                 * Parses get route; this route doesn't expose any properties.
                 * @method        
                 * @example baasicCompanyRouteService.get.expand({});               
                 **/ 			
-                get: uriTemplateService.parse('companies/{id}/{?embed,fields}'),                
+                get: uriTemplateService.parse('lookups/companies/{id}/{?embed,fields}'),                
                 batch:{
                     /**
                     * Parses create route; this URI template does not expose any additional options.
                     * @method batch.create       
                     * @example baasicCompanyRouteService.batch.create.expand({});              
                     **/  				
-                    create: uriTemplateService.parse('companies/batch'),
+                    create: uriTemplateService.parse('lookups/companies/batch'),
                     /**
                     * Parses remove route; this must be expanded with a list of company Ids which need to be removed.
                     * @method batch.remove       
                     * @example baasicCompanyRouteService.batch.remove.expand({companyIds: <companyIds>);              
                     **/                      
-                    remove: uriTemplateService.parse('companies/batch/{companyIds}'),
+                    remove: uriTemplateService.parse('lookups/companies/batch/{companyIds}'),
                     /**
                     * Parses update route; this URI template does not expose any additional options.
                     * @method batch.update       
                     * @example baasicCompanyRouteService.batch.create.expand({});              
                     **/                    
-                    update: uriTemplateService.parse('companies/batch')
+                    update: uriTemplateService.parse('lookups/companies/batch')
                 }   
             };
         }]);
