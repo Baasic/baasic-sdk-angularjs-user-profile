@@ -106,12 +106,6 @@ baasicUserProfileService.remove(userProfile)
                     var params = baasicApiService.removeParams(data);
                     return baasicApiHttp.delete(params[baasicConstants.modelPropertyName].links('delete').href);
                 },                 
-                /**
-                * Provides direct access to `userProfileRouteService`.
-                * @method        
-                * @example baasicUserProfileService.routeService.get.expand(expandObject);
-                **/  							    
-				        routeService: userProfileRouteService,
                 acl: {
                     /**
                     * Returns a promise that is resolved once the get action has been performed. Success response returns a list of ACL policies established for the specified user profile resource.
@@ -190,7 +184,13 @@ baasicUserProfileService.acl.removeByRole('<profile-id>', '<access-action>', '<r
                         params.accessAction = action;
                         return baasicApiHttp.delete(userProfileRouteService.acl.deleteByRole.expand(params));
                     }
-                }
+                }, 
+                /**
+                * Provides direct access to `userProfileRouteService`.
+                * @method        
+                * @example baasicUserProfileService.routeService.get.expand(expandObject);
+                **/  							    
+				routeService: userProfileRouteService
             };
         }]);
 }(angular, module));

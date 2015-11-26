@@ -10,10 +10,10 @@
             return {     
                 /**
                 * Parses find route which can be expanded with additional options. Supported items are: 
-                * - `searchQuery` - A string referencing education properties using the phrase or BQL (Baasic Query Language) search.
-                * - `page` - A value used to set the page number, i.e. to retrieve certain education subset from the storage.
+                * - `searchQuery` - A string referencing user education properties using the phrase or BQL (Baasic Query Language) search.
+                * - `page` - A value used to set the page number, i.e. to retrieve certain user education subset from the storage.
                 * - `rpp` - A value used to limit the size of result set per page.
-                * - `sort` - A string used to set the user profile property to sort the result collection by.
+                * - `sort` - A string used to set the user education property to sort the result collection by.
 				* - `embed` - Comma separated list of resources to be contained within the current representation.
                 * @method        
                 * @example baasicUserEducationRouteService.find.expand({searchQuery: '<search-phrase>'});               

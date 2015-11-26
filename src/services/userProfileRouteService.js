@@ -39,7 +39,7 @@
                 parse: uriTemplateService.parse,
                 acl: {
 					/**
-					* Parses get user profile acl route; this URI template should be expanded with the Id of the user profile.					
+					* Parses get user profile acl route; this URI template should be expanded with the Id of the user profile resource.					
 					* @method acl.get       
 					* @example 
 baasicUserProfileRouteService.acl.get.expand(
@@ -58,7 +58,7 @@ baasicUserProfileRouteService.acl.update.expand(
                     update: uriTemplateService.parse('profiles/{id}/acl/{?fields}'),
 					/**
 					* Parses deleteByUser user profile acl route which can be expanded with additional options. Supported items are:
-					* - `id` - Id of the user profile.
+					* - `id` - Id of the user profile resource.
 					* - `accessAction` - Action abbreviation which identifies ACL policy assigned to the specified user and user profile resource.
 					* - `user` - A value which uniquely identifies user for which ACL policy needs to be removed.					
 					* @method acl.deleteByUser       

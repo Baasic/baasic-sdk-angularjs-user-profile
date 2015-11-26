@@ -64,7 +64,7 @@ baasicOrganizationService.get()
                     return baasicApiHttp.get(organizationRouteService.get.expand(baasicApiService.getParams(id, options)));
                 },                                   
                  /**
-                 * Returns a promise that is resolved once the remove action has been performed. This action will remove a organization resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicOrganizationRouteService` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+                 * Returns a promise that is resolved once the remove action has been performed. This action will remove an organization resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicOrganizationRouteService` route template. Here is an example of how a route can be obtained from HAL enabled objects:
 ```
 var params = baasicApiService.removeParams(organization);
 var uri = params['model'].links('delete').href;
@@ -85,7 +85,7 @@ baasicOrganizationService.remove(organization)
                     return baasicApiHttp.delete(params[baasicConstants.modelPropertyName].links('delete').href);
                 }, 
                 /**
-                 * Returns a promise that is resolved once the update organization action has been performed; this action updates a organization resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicOrganizationRouteService` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+                 * Returns a promise that is resolved once the update organization action has been performed; this action updates an organization resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicOrganizationRouteService` route template. Here is an example of how a route can be obtained from HAL enabled objects:
 ```
 var params = baasicApiService.removeParams(organization);
 var uri = params['model'].links('put').href;

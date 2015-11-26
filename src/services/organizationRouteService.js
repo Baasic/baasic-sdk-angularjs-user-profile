@@ -11,9 +11,9 @@
                 /**
                 * Parses find route which can be expanded with additional options. Supported items are: 
                 * - `searchQuery` - A string referencing organization properties using the phrase or BQL (Baasic Query Language) search.
-                * - `page` - A value used to set the page number, i.e. to retrieve certain Organization subset from the storage.
+                * - `page` - A value used to set the page number, i.e. to retrieve certain organization subset from the storage.
                 * - `rpp` - A value used to limit the size of result set per page.
-                * - `sort` - A string used to set the user profile property to sort the result collection by.
+                * - `sort` - A string used to set the organization property to sort the result collection by.
 				* - `embed` - Comma separated list of resources to be contained within the current representation.
                 * @method        
                 * @example baasicOrganizationRouteService.find.expand({searchQuery: '<search-phrase>'});               
@@ -39,7 +39,7 @@
                     **/  				
                     create: uriTemplateService.parse('lookups/organizations/batch'),
                     /**
-                    * Parses remove route; this must be expanded with a list of organization Ids which need to be removed.
+                    * Parses remove route; this must be expanded with a list of organization identifiers which need to be removed.
                     * @method batch.remove       
                     * @example baasicOrganizationRouteService.batch.remove.expand({organizationIds: <organizationIds>);              
                     **/                      
