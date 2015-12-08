@@ -39,7 +39,7 @@
                  * - `searchQuery` - A string referencing company properties using the phrase or BQL (Baasic Query Language) search.
                  * - `page` - A value used to set the page number, i.e. to retrieve certain company subset from the storage.
                  * - `rpp` - A value used to limit the size of result set per page.
-                 * - `sort` - A string used to set the user profile property to sort the result collection by.
+                 * - `sort` - A string used to set the company property to sort the result collection by.
                  * - `embed` - Comma separated list of resources to be contained within the current representation.
                  * @method        
                  * @example baasicCompanyRouteService.find.expand({searchQuery: '<search-phrase>'});               
@@ -65,7 +65,7 @@
                      **/
                     create: uriTemplateService.parse('lookups/companies/batch'),
                     /**
-                     * Parses remove route; this must be expanded with a list of company Ids which need to be removed.
+                     * Parses remove route; this must be expanded with a list of company identifiers which need to be removed.
                      * @method batch.remove       
                      * @example baasicCompanyRouteService.batch.remove.expand({companyIds: <companyIds>);              
                      **/
@@ -278,9 +278,9 @@
                 /**
                  * Parses find route which can be expanded with additional options. Supported items are: 
                  * - `searchQuery` - A string referencing organization properties using the phrase or BQL (Baasic Query Language) search.
-                 * - `page` - A value used to set the page number, i.e. to retrieve certain Organization subset from the storage.
+                 * - `page` - A value used to set the page number, i.e. to retrieve certain organization subset from the storage.
                  * - `rpp` - A value used to limit the size of result set per page.
-                 * - `sort` - A string used to set the user profile property to sort the result collection by.
+                 * - `sort` - A string used to set the organization property to sort the result collection by.
                  * - `embed` - Comma separated list of resources to be contained within the current representation.
                  * @method        
                  * @example baasicOrganizationRouteService.find.expand({searchQuery: '<search-phrase>'});               
@@ -306,7 +306,7 @@
                      **/
                     create: uriTemplateService.parse('lookups/organizations/batch'),
                     /**
-                     * Parses remove route; this must be expanded with a list of organization Ids which need to be removed.
+                     * Parses remove route; this must be expanded with a list of organization identifiers which need to be removed.
                      * @method batch.remove       
                      * @example baasicOrganizationRouteService.batch.remove.expand({organizationIds: <organizationIds>);              
                      **/
@@ -397,7 +397,7 @@
                     return baasicApiHttp.get(organizationRouteService.get.expand(baasicApiService.getParams(id, options)));
                 },
                 /**
-                 * Returns a promise that is resolved once the remove action has been performed. This action will remove a organization resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicOrganizationRouteService` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+                 * Returns a promise that is resolved once the remove action has been performed. This action will remove an organization resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicOrganizationRouteService` route template. Here is an example of how a route can be obtained from HAL enabled objects:
                  ```
                  var params = baasicApiService.removeParams(organization);
                  var uri = params['model'].links('delete').href;
@@ -418,7 +418,7 @@
                     return baasicApiHttp.delete(params[baasicConstants.modelPropertyName].links('delete').href);
                 },
                 /**
-                 * Returns a promise that is resolved once the update organization action has been performed; this action updates a organization resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicOrganizationRouteService` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+                 * Returns a promise that is resolved once the update organization action has been performed; this action updates an organization resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicOrganizationRouteService` route template. Here is an example of how a route can be obtained from HAL enabled objects:
                  ```
                  var params = baasicApiService.removeParams(organization);
                  var uri = params['model'].links('put').href;
@@ -518,10 +518,10 @@
             return {
                 /**
                  * Parses find route which can be expanded with additional options. Supported items are: 
-                 * - `searchQuery` - A string referencing Skill properties using the phrase or BQL (Baasic Query Language) search.
-                 * - `page` - A value used to set the page number, i.e. to retrieve certain Skill subset from the storage.
+                 * - `searchQuery` - A string referencing skill properties using the phrase or BQL (Baasic Query Language) search.
+                 * - `page` - A value used to set the page number, i.e. to retrieve certain skill subset from the storage.
                  * - `rpp` - A value used to limit the size of result set per page.
-                 * - `sort` - A string used to set the user profile property to sort the result collection by.
+                 * - `sort` - A string used to set the skill property to sort the result collection by.
                  * - `embed` - Comma separated list of resources to be contained within the current representation.
                  * @method        
                  * @example baasicSkillRouteService.find.expand({searchQuery: '<search-phrase>'});               
@@ -547,7 +547,7 @@
                      **/
                     create: uriTemplateService.parse('profile/lookups/skills/batch'),
                     /**
-                     * Parses remove route; this must be expanded with a list of skill Ids which need to be removed.
+                     * Parses remove route; this must be expanded with a list of skill identifiers which need to be removed.
                      * @method batch.remove       
                      * @example baasicSkillRouteService.batch.remove.expand({skillIds: <skillIds>);              
                      **/
@@ -759,10 +759,10 @@
             return {
                 /**
                  * Parses find route which can be expanded with additional options. Supported items are: 
-                 * - `searchQuery` - A string referencing education properties using the phrase or BQL (Baasic Query Language) search.
-                 * - `page` - A value used to set the page number, i.e. to retrieve certain education subset from the storage.
+                 * - `searchQuery` - A string referencing user education properties using the phrase or BQL (Baasic Query Language) search.
+                 * - `page` - A value used to set the page number, i.e. to retrieve certain user education subset from the storage.
                  * - `rpp` - A value used to limit the size of result set per page.
-                 * - `sort` - A string used to set the user profile property to sort the result collection by.
+                 * - `sort` - A string used to set the user education property to sort the result collection by.
                  * - `embed` - Comma separated list of resources to be contained within the current representation.
                  * @method        
                  * @example baasicUserEducationRouteService.find.expand({searchQuery: '<search-phrase>'});               
@@ -844,7 +844,7 @@
                     return baasicApiHttp.get(userEducationRouteService.find.expand(baasicApiService.findParams(options)));
                 },
                 /**
-                 * Returns a promise that is resolved once the get action has been performed. Success response returns the user Education resource.
+                 * Returns a promise that is resolved once the get action has been performed. Success response returns the user education resource.
                  * @method        
                  * @example 
                  baasicUserEducationService.get()
@@ -955,7 +955,7 @@
                 parse: uriTemplateService.parse,
                 acl: {
                     /**
-                     * Parses get user profile acl route; this URI template should be expanded with the Id of the user profile.					
+                     * Parses get user profile acl route; this URI template should be expanded with the Id of the user profile resource.					
                      * @method acl.get       
                      * @example 
                      baasicUserProfileRouteService.acl.get.expand(
@@ -974,7 +974,7 @@
                     update: uriTemplateService.parse('profiles/{id}/acl/{?fields}'),
                     /**
                      * Parses deleteByUser user profile acl route which can be expanded with additional options. Supported items are:
-                     * - `id` - Id of the user profile.
+                     * - `id` - Id of the user profile resource.
                      * - `accessAction` - Action abbreviation which identifies ACL policy assigned to the specified user and user profile resource.
                      * - `user` - A value which uniquely identifies user for which ACL policy needs to be removed.					
                      * @method acl.deleteByUser       
@@ -1122,12 +1122,6 @@
                     var params = baasicApiService.removeParams(data);
                     return baasicApiHttp.delete(params[baasicConstants.modelPropertyName].links('delete').href);
                 },
-                /**
-                 * Provides direct access to `userProfileRouteService`.
-                 * @method        
-                 * @example baasicUserProfileService.routeService.get.expand(expandObject);
-                 **/
-                routeService: userProfileRouteService,
                 acl: {
                     /**
                      * Returns a promise that is resolved once the get action has been performed. Success response returns a list of ACL policies established for the specified user profile resource.
@@ -1206,7 +1200,13 @@
                         params.accessAction = action;
                         return baasicApiHttp.delete(userProfileRouteService.acl.deleteByRole.expand(params));
                     }
-                }
+                },
+                /**
+                 * Provides direct access to `userProfileRouteService`.
+                 * @method        
+                 * @example baasicUserProfileService.routeService.get.expand(expandObject);
+                 **/
+                routeService: userProfileRouteService
             };
         }]);
     }(angular, module));
@@ -1232,10 +1232,10 @@
             return {
                 /**
                  * Parses find route which can be expanded with additional options. Supported items are: 
-                 * - `searchQuery` - A string referencing Skill properties using the phrase or BQL (Baasic Query Language) search.
-                 * - `page` - A value used to set the page number, i.e. to retrieve certain Skill subset from the storage.
+                 * - `searchQuery` - A string referencing user skill properties using the phrase or BQL (Baasic Query Language) search.
+                 * - `page` - A value used to set the page number, i.e. to retrieve certain user skill subset from the storage.
                  * - `rpp` - A value used to limit the size of result set per page.
-                 * - `sort` - A string used to set the user profile property to sort the result collection by.
+                 * - `sort` - A string used to set the user skill property to sort the result collection by.
                  * - `embed` - Comma separated list of resources to be contained within the current representation.
                  * @method        
                  * @example baasicUserSkillRouteService.find.expand({searchQuery: '<search-phrase>'});               
@@ -1398,10 +1398,10 @@
             return {
                 /**
                  * Parses find route which can be expanded with additional options. Supported items are: 
-                 * - `searchQuery` - A string referencing work properties using the phrase or BQL (Baasic Query Language) search.
-                 * - `page` - A value used to set the page number, i.e. to retrieve certain work subset from the storage.
+                 * - `searchQuery` - A string referencing user work properties using the phrase or BQL (Baasic Query Language) search.
+                 * - `page` - A value used to set the page number, i.e. to retrieve certain user work subset from the storage.
                  * - `rpp` - A value used to limit the size of result set per page.
-                 * - `sort` - A string used to set the user profile property to sort the result collection by.
+                 * - `sort` - A string used to set the user work property to sort the result collection by.
                  * - `embed` - Comma separated list of resources to be contained within the current representation.
                  * @method        
                  * @example baasicUserWorkRouteService.find.expand({searchQuery: '<search-phrase>'});               
