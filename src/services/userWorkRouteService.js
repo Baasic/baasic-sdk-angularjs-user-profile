@@ -10,10 +10,10 @@
             return {     
                 /**
                 * Parses find route which can be expanded with additional options. Supported items are: 
-                * - `searchQuery` - A string referencing work properties using the phrase or BQL (Baasic Query Language) search.
-                * - `page` - A value used to set the page number, i.e. to retrieve certain work subset from the storage.
+                * - `searchQuery` - A string referencing user work properties using the phrase or BQL (Baasic Query Language) search.
+                * - `page` - A value used to set the page number, i.e. to retrieve certain user work subset from the storage.
                 * - `rpp` - A value used to limit the size of result set per page.
-                * - `sort` - A string used to set the user profile property to sort the result collection by.
+                * - `sort` - A string used to set the user work property to sort the result collection by.
 				* - `embed` - Comma separated list of resources to be contained within the current representation.
                 * @method        
                 * @example baasicUserWorkRouteService.find.expand({searchQuery: '<search-phrase>'});               

@@ -10,10 +10,10 @@
             return {     
                 /**
                 * Parses find route which can be expanded with additional options. Supported items are: 
-                * - `searchQuery` - A string referencing Skill properties using the phrase or BQL (Baasic Query Language) search.
-                * - `page` - A value used to set the page number, i.e. to retrieve certain Skill subset from the storage.
+                * - `searchQuery` - A string referencing user skill properties using the phrase or BQL (Baasic Query Language) search.
+                * - `page` - A value used to set the page number, i.e. to retrieve certain user skill subset from the storage.
                 * - `rpp` - A value used to limit the size of result set per page.
-                * - `sort` - A string used to set the user profile property to sort the result collection by.
+                * - `sort` - A string used to set the user skill property to sort the result collection by.
 				* - `embed` - Comma separated list of resources to be contained within the current representation.
                 * @method        
                 * @example baasicUserSkillRouteService.find.expand({searchQuery: '<search-phrase>'});               

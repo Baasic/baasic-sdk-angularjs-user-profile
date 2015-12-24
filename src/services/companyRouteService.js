@@ -13,7 +13,7 @@
                 * - `searchQuery` - A string referencing company properties using the phrase or BQL (Baasic Query Language) search.
                 * - `page` - A value used to set the page number, i.e. to retrieve certain company subset from the storage.
                 * - `rpp` - A value used to limit the size of result set per page.
-                * - `sort` - A string used to set the user profile property to sort the result collection by.
+                * - `sort` - A string used to set the company property to sort the result collection by.
 				* - `embed` - Comma separated list of resources to be contained within the current representation.
                 * @method        
                 * @example baasicCompanyRouteService.find.expand({searchQuery: '<search-phrase>'});               
@@ -39,7 +39,7 @@
                     **/  				
                     create: uriTemplateService.parse('lookups/companies/batch'),
                     /**
-                    * Parses remove route; this must be expanded with a list of company Ids which need to be removed.
+                    * Parses remove route; this must be expanded with a list of company identifiers which need to be removed.
                     * @method batch.remove       
                     * @example baasicCompanyRouteService.batch.remove.expand({companyIds: <companyIds>);              
                     **/                      

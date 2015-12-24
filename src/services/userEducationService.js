@@ -49,7 +49,7 @@ baasicUserEducationService.find({
                     return baasicApiHttp.get(userEducationRouteService.find.expand(baasicApiService.findParams(options)));
                 },                
                 /**
-                * Returns a promise that is resolved once the get action has been performed. Success response returns the user Education resource.
+                * Returns a promise that is resolved once the get action has been performed. Success response returns the user education resource.
                 * @method        
                 * @example 
 baasicUserEducationService.get()
