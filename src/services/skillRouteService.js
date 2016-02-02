@@ -39,15 +39,15 @@
                     **/  				
                     create: uriTemplateService.parse('profile/lookups/skills/batch'),
                     /**
-                    * Parses remove route; this must be expanded with a list of skill identifiers which need to be removed.
+                    * Parses remove route; this URI template does not expose any additional options.
                     * @method batch.remove       
-                    * @example baasicSkillRouteService.batch.remove.expand({skillIds: <skillIds>);              
+                    * @example baasicSkillRouteService.batch.remove.expand({});              
                     **/                      
-                    remove: uriTemplateService.parse('profile/lookups/skills/batch/{skillIds}'),
+                    remove: uriTemplateService.parse('profile/lookups/skills/batch'),
                     /**
                     * Parses update route; this URI template does not expose any additional options.
                     * @method batch.update       
-                    * @example baasicSkillRouteService.batch.create.expand({});              
+                    * @example baasicSkillRouteService.batch.update.expand({});              
                     **/                    
                     update: uriTemplateService.parse('profile/lookups/skills/batch')
                 }   

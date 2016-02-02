@@ -39,15 +39,15 @@
                     **/  				
                     create: uriTemplateService.parse('lookups/companies/batch'),
                     /**
-                    * Parses remove route; this must be expanded with a list of company identifiers which need to be removed.
+                    * Parses remove route; this URI template does not expose any additional options.
                     * @method batch.remove       
-                    * @example baasicCompanyRouteService.batch.remove.expand({companyIds: <companyIds>);              
+                    * @example baasicCompanyRouteService.batch.remove.expand({});              
                     **/                      
-                    remove: uriTemplateService.parse('lookups/companies/batch/{companyIds}'),
+                    remove: uriTemplateService.parse('lookups/companies/batch'),
                     /**
                     * Parses update route; this URI template does not expose any additional options.
                     * @method batch.update       
-                    * @example baasicCompanyRouteService.batch.create.expand({});              
+                    * @example baasicCompanyRouteService.batch.update.expand({});              
                     **/                    
                     update: uriTemplateService.parse('lookups/companies/batch')
                 }   

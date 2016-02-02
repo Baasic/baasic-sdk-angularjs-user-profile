@@ -154,8 +154,11 @@ baasicSkillService.update(skill)
   });		
                   **/		                  
                   remove: function(ids) {
-                      var data = ids.join(',');
-                      return baasicApiHttp.delete(skillRouteService.batch.remove.expand({skillIds: data}));   
+                    return baasicApiHttp({
+                        url: skillRouteService.batch.remove.expand(),
+                        method: 'DELETE',
+                        data: ids
+                    });   
                   }
                 }
             };       

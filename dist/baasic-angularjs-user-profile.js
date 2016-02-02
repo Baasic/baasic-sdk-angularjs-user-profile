@@ -65,15 +65,15 @@
                      **/
                     create: uriTemplateService.parse('lookups/companies/batch'),
                     /**
-                     * Parses remove route; this must be expanded with a list of company identifiers which need to be removed.
+                     * Parses remove route; this URI template does not expose any additional options.
                      * @method batch.remove       
-                     * @example baasicCompanyRouteService.batch.remove.expand({companyIds: <companyIds>);              
+                     * @example baasicCompanyRouteService.batch.remove.expand({});              
                      **/
-                    remove: uriTemplateService.parse('lookups/companies/batch/{companyIds}'),
+                    remove: uriTemplateService.parse('lookups/companies/batch'),
                     /**
                      * Parses update route; this URI template does not expose any additional options.
                      * @method batch.update       
-                     * @example baasicCompanyRouteService.batch.create.expand({});              
+                     * @example baasicCompanyRouteService.batch.update.expand({});              
                      **/
                     update: uriTemplateService.parse('lookups/companies/batch')
                 }
@@ -246,10 +246,11 @@
                      });		
                      **/
                     remove: function (ids) {
-                        var data = ids.join(',');
-                        return baasicApiHttp.delete(companyRouteService.batch.remove.expand({
-                            companyIds: data
-                        }));
+                        return baasicApiHttp({
+                            url: companyRouteService.batch.remove.expand(),
+                            method: 'DELETE',
+                            data: ids
+                        });
                     }
                 }
             };
@@ -306,15 +307,15 @@
                      **/
                     create: uriTemplateService.parse('lookups/organizations/batch'),
                     /**
-                     * Parses remove route; this must be expanded with a list of organization identifiers which need to be removed.
+                     * Parses remove route; this URI template does not expose any additional options.
                      * @method batch.remove       
-                     * @example baasicOrganizationRouteService.batch.remove.expand({organizationIds: <organizationIds>);              
+                     * @example baasicOrganizationRouteService.batch.remove.expand();              
                      **/
-                    remove: uriTemplateService.parse('lookups/organizations/batch/{organizationIds}'),
+                    remove: uriTemplateService.parse('lookups/organizations/batch'),
                     /**
                      * Parses update route; this URI template does not expose any additional options.
                      * @method batch.update       
-                     * @example baasicOrganizationRouteService.batch.create.expand({});              
+                     * @example baasicOrganizationRouteService.batch.update.expand({});              
                      **/
                     update: uriTemplateService.parse('lookups/organizations/batch')
                 }
@@ -487,10 +488,11 @@
                      });		
                      **/
                     remove: function (ids) {
-                        var data = ids.join(',');
-                        return baasicApiHttp.delete(organizationRouteService.batch.remove.expand({
-                            organizationIds: data
-                        }));
+                        return baasicApiHttp({
+                            url: organizationRouteService.batch.remove.expand(),
+                            method: 'DELETE',
+                            data: ids
+                        });
                     }
                 }
             };
@@ -547,15 +549,15 @@
                      **/
                     create: uriTemplateService.parse('profile/lookups/skills/batch'),
                     /**
-                     * Parses remove route; this must be expanded with a list of skill identifiers which need to be removed.
+                     * Parses remove route; this URI template does not expose any additional options.
                      * @method batch.remove       
-                     * @example baasicSkillRouteService.batch.remove.expand({skillIds: <skillIds>);              
+                     * @example baasicSkillRouteService.batch.remove.expand({});              
                      **/
-                    remove: uriTemplateService.parse('profile/lookups/skills/batch/{skillIds}'),
+                    remove: uriTemplateService.parse('profile/lookups/skills/batch'),
                     /**
                      * Parses update route; this URI template does not expose any additional options.
                      * @method batch.update       
-                     * @example baasicSkillRouteService.batch.create.expand({});              
+                     * @example baasicSkillRouteService.batch.update.expand({});              
                      **/
                     update: uriTemplateService.parse('profile/lookups/skills/batch')
                 }
@@ -728,10 +730,11 @@
                      });		
                      **/
                     remove: function (ids) {
-                        var data = ids.join(',');
-                        return baasicApiHttp.delete(skillRouteService.batch.remove.expand({
-                            skillIds: data
-                        }));
+                        return baasicApiHttp({
+                            url: skillRouteService.batch.remove.expand(),
+                            method: 'DELETE',
+                            data: ids
+                        });
                     }
                 }
             };

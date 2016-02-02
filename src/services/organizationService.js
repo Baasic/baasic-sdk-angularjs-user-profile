@@ -154,8 +154,11 @@ baasicOrganizationService.update(organization)
   });		
                   **/		                  
                   remove: function(ids) {
-                      var data = ids.join(',');
-                      return baasicApiHttp.delete(organizationRouteService.batch.remove.expand({organizationIds: data}));   
+                    return baasicApiHttp({
+                        url: organizationRouteService.batch.remove.expand(),
+                        method: 'DELETE',
+                        data: ids
+                    });     
                   }
                 }             
             };       

@@ -154,8 +154,11 @@ baasicCompanyService.update(company)
   });		
                   **/		                  
                   remove: function(ids) {
-                      var data = ids.join(',');
-                      return baasicApiHttp.delete(companyRouteService.batch.remove.expand({companyIds: data}));   
+                    return baasicApiHttp({
+                        url: companyRouteService.batch.remove.expand(),
+                        method: 'DELETE',
+                        data: ids
+                    });                         
                   }
                 }             
             };       
