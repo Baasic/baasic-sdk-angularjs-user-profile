@@ -1,7 +1,7 @@
 /* globals module */
 /**
  * @module baasicUserSkillService
- * @description Baasic User Skill Service provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic User Skill Route Service to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ * @description Baasic User Skill Service provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic User Skill Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
 */
 (function (angular, module, undefined) {
     'use strict';
@@ -110,9 +110,6 @@ baasicUserSkillService.update(skill)
 }(angular, module));
 
 /**
- * @copyright (c) 2015 Mono
- * @license MIT
- * @author Mono
  * @overview 
  ***Notes:**
  - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.

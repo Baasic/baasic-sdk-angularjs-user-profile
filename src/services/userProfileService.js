@@ -1,7 +1,7 @@
 ﻿/* globals module */
 /**
  * @module baasicUserProfileService
- * @description Baasic User Profile Service provides an easy way to consume Baasic User Profile REST API end-points. In order to obtain a needed routes `baasicUserProfileService` uses `baasicUserProfileRouteService`.
+ * @description Baasic User Profile Service provides an easy way to consume Baasic User Profile REST API end-points. In order to obtain needed routes `baasicUserProfileService` uses `baasicUserProfileRouteService`.
 */
 (function (angular, module, undefined) {
     'use strict';
@@ -196,9 +196,6 @@ baasicUserProfileService.acl.removeByRole('<profile-id>', '<access-action>', '<r
 }(angular, module));
 
 /**
- * @copyright (c) 2015 Mono
- * @license MIT
- * @author Mono
  * @overview 
  ***Notes:**
  - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.

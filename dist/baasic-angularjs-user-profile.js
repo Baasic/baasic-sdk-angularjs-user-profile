@@ -2,9 +2,6 @@
 
     /** 
      * @description The angular.module is a global place for creating, registering or retrieving modules. All modules should be registered in an application using this mechanism. An angular module is a container for the different parts of your app - services, directives etc. In order to use `baasic.userProfile` module functionality it must be added as a dependency to your app.
-     * @copyright (c) 2015 Mono
-     * @license MIT
-     * @author Mono
      * @module baasic.userProfile
      * @example
      (function (Main) {
@@ -28,7 +25,7 @@
     /* globals module */
     /**
      * @module baasicCompanyRouteService
-     * @description Baasic Company Route Service provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Company Route Service to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
+     * @description Baasic Company Route Service provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Company Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
      */
     (function (angular, module, undefined) {
         'use strict';
@@ -81,9 +78,6 @@
         }]);
     }(angular, module));
     /**
-     * @copyright (c) 2015 Mono
-     * @license MIT
-     * @author Mono
      * @overview 
      ***Notes:**
      - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
@@ -94,7 +88,7 @@
     /* globals module */
     /**
      * @module baasicCompanyService
-     * @description Baasic Company Service provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Company Route Service to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+     * @description Baasic Company Service provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Company Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
      */
     (function (angular, module, undefined) {
         'use strict';
@@ -258,9 +252,6 @@
     }(angular, module));
 
     /**
-     * @copyright (c) 2015 Mono
-     * @license MIT
-     * @author Mono
      * @overview 
      ***Notes:**
      - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
@@ -270,7 +261,7 @@
     /* globals module */
     /**
      * @module baasicOrganizationRouteService
-     * @description Baasic Organization Route Service provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Organization Route Service to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
+     * @description Baasic Organization Route Service provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Organization Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
      */
     (function (angular, module, undefined) {
         'use strict';
@@ -323,9 +314,6 @@
         }]);
     }(angular, module));
     /**
-     * @copyright (c) 2015 Mono
-     * @license MIT
-     * @author Mono
      * @overview 
      ***Notes:**
      - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
@@ -336,7 +324,7 @@
     /* globals module */
     /**
      * @module baasicOrganizationService
-     * @description Baasic Organization Service provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Organization Route Service to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+     * @description Baasic Organization Service provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Organization Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
      */
     (function (angular, module, undefined) {
         'use strict';
@@ -500,9 +488,6 @@
     }(angular, module));
 
     /**
-     * @copyright (c) 2015 Mono
-     * @license MIT
-     * @author Mono
      * @overview 
      ***Notes:**
      - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
@@ -512,7 +497,7 @@
     /* globals module */
     /**
      * @module baasicSkillRouteService
-     * @description Baasic Skill Route Service provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Skill Route Service to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
+     * @description Baasic Skill Route Service provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Skill Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
      */
     (function (angular, module, undefined) {
         'use strict';
@@ -565,9 +550,6 @@
         }]);
     }(angular, module));
     /**
-     * @copyright (c) 2015 Mono
-     * @license MIT
-     * @author Mono
      * @overview 
      ***Notes:**
      - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
@@ -578,7 +560,7 @@
     /* globals module */
     /**
      * @module baasicSkillService
-     * @description Baasic Skill Service provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Skill Route Service to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+     * @description Baasic Skill Service provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Skill Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
      */
     (function (angular, module, undefined) {
         'use strict';
@@ -742,9 +724,6 @@
     }(angular, module));
 
     /**
-     * @copyright (c) 2015 Mono
-     * @license MIT
-     * @author Mono
      * @overview 
      ***Notes:**
      - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
@@ -754,7 +733,7 @@
     /* globals module */
     /**
      * @module baasicUserEducationRouteService
-     * @description Baasic User Education Route Service provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic User Education Route Service to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+     * @description Baasic User Education Route Service provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic User Education Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
      */
     (function (angular, module, undefined) {
         'use strict';
@@ -787,9 +766,6 @@
         }]);
     }(angular, module));
     /**
-     * @copyright (c) 2015 Mono
-     * @license MIT
-     * @author Mono
      * @overview 
      ***Notes:**
      - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
@@ -800,7 +776,7 @@
     /* globals module */
     /**
      * @module baasicUserEducationService
-     * @description Baasic User Education Service provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic User Education Route Service to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+     * @description Baasic User Education Service provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic User Education Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
      */
     (function (angular, module, undefined) {
         'use strict';
@@ -909,9 +885,6 @@
     }(angular, module));
 
     /**
-     * @copyright (c) 2015 Mono
-     * @license MIT
-     * @author Mono
      * @overview 
      ***Notes:**
      - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
@@ -921,7 +894,7 @@
     /* globals module */
     /**
      * @module baasicUserProfileRouteService
-     * @description Baasic User Profile Route Service provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic User Profile Route Service to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
+     * @description Baasic User Profile Route Service provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic User Profile Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
      */
     (function (angular, module, undefined) {
         'use strict';
@@ -1008,9 +981,6 @@
         }]);
     }(angular, module));
     /**
-     * @copyright (c) 2015 Mono
-     * @license MIT
-     * @author Mono
      * @overview 
      ***Notes:**
      - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
@@ -1021,7 +991,7 @@
     /* globals module */
     /**
      * @module baasicUserProfileService
-     * @description Baasic User Profile Service provides an easy way to consume Baasic User Profile REST API end-points. In order to obtain a needed routes `baasicUserProfileService` uses `baasicUserProfileRouteService`.
+     * @description Baasic User Profile Service provides an easy way to consume Baasic User Profile REST API end-points. In order to obtain needed routes `baasicUserProfileService` uses `baasicUserProfileRouteService`.
      */
     (function (angular, module, undefined) {
         'use strict';
@@ -1215,9 +1185,6 @@
     }(angular, module));
 
     /**
-     * @copyright (c) 2015 Mono
-     * @license MIT
-     * @author Mono
      * @overview 
      ***Notes:**
      - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
@@ -1227,7 +1194,7 @@
     /* globals module */
     /**
      * @module baasicUserSkillRouteService
-     * @description Baasic User Skill Route Service provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic User Skill Route Service to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+     * @description Baasic User Skill Route Service provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic User Skill Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
      */
     (function (angular, module, undefined) {
         'use strict';
@@ -1260,9 +1227,6 @@
         }]);
     }(angular, module));
     /**
-     * @copyright (c) 2015 Mono
-     * @license MIT
-     * @author Mono
      * @overview 
      ***Notes:**
      - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
@@ -1273,7 +1237,7 @@
     /* globals module */
     /**
      * @module baasicUserSkillService
-     * @description Baasic User Skill Service provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic User Skill Route Service to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+     * @description Baasic User Skill Service provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic User Skill Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
      */
     (function (angular, module, undefined) {
         'use strict';
@@ -1381,9 +1345,6 @@
     }(angular, module));
 
     /**
-     * @copyright (c) 2015 Mono
-     * @license MIT
-     * @author Mono
      * @overview 
      ***Notes:**
      - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
@@ -1393,7 +1354,7 @@
     /* globals module */
     /**
      * @module baasicUserWorkRouteService
-     * @description Baasic User Work Route Service provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic User Work Route Service to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+     * @description Baasic User Work Route Service provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic User Work Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
      */
     (function (angular, module, undefined) {
         'use strict';
@@ -1426,9 +1387,6 @@
         }]);
     }(angular, module));
     /**
-     * @copyright (c) 2015 Mono
-     * @license MIT
-     * @author Mono
      * @overview 
      ***Notes:**
      - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
@@ -1439,7 +1397,7 @@
     /* globals module */
     /**
      * @module baasicUserWorkService
-     * @description Baasic User Work Service provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic User Work Route Service to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+     * @description Baasic User Work Service provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic User Work Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
      */
     (function (angular, module, undefined) {
         'use strict';
@@ -1547,9 +1505,6 @@
     }(angular, module));
 
     /**
-     * @copyright (c) 2015 Mono
-     * @license MIT
-     * @author Mono
      * @overview 
      ***Notes:**
      - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
