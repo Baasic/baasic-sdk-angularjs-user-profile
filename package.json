@@ -1,6 +1,6 @@
 {
   "name": "baasic-angularjs-user-profile",
-  "version": "0.1.135",
+  "version": "0.1.136",
   "devDependencies": {
     "baasic-javascript-docgen": "git://github.com/Baasic/baasic-javascript-docgen",
     "gulp": ">3.4.0",
