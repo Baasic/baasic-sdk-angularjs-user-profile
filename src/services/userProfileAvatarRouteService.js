@@ -39,17 +39,17 @@ baasicUserProfileAvatarRouteService.streams.get.expand(
                     get: uriTemplateService.parse('profiles/{id}/avatar-streams/{?width,height}'),
 
                     /**
-                    * Parses create route; this route should be expanded with the path which indicates where the stream will be saved as well with id of the profile.
+                    * Parses create route; this route should be expanded with the filename which indicates where the stream will be saved as well with id of the profile.
                     * @method streams.create
                     * @example 
 baasicUserProfileAvatarRouteService.streams.create.expand(
     {
-        path: '<path>',
+        filename: '<filename>',
         id: '<file-id>'
     },
 );               
                     **/
-                    create: uriTemplateService.parse('profiles/{id}/avatar-streams/{path}'),
+                    create: uriTemplateService.parse('profiles/{id}/avatar-streams/{filename}'),
                     
                     /**
                     * Parses update route; this route should be expanded with the id of the profile. Additional supported items are:

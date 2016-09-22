@@ -931,17 +931,17 @@
                     get: uriTemplateService.parse('profiles/{id}/avatar-streams/{?width,height}'),
 
                     /**
-                     * Parses create route; this route should be expanded with the path which indicates where the stream will be saved as well with id of the profile.
+                     * Parses create route; this route should be expanded with the filename which indicates where the stream will be saved as well with id of the profile.
                      * @method streams.create
                      * @example 
                      baasicUserProfileAvatarRouteService.streams.create.expand(
                      {
-                     path: '<path>',
+                     filename: '<filename>',
                      id: '<file-id>'
                      },
                      );
                      **/
-                    create: uriTemplateService.parse('profiles/{id}/avatar-streams/{path}'),
+                    create: uriTemplateService.parse('profiles/{id}/avatar-streams/{filename}'),
 
                     /**
                      * Parses update route; this route should be expanded with the id of the profile. Additional supported items are:
@@ -1180,7 +1180,7 @@
                      * Returns a promise that is resolved once the create file stream action has been performed; this action will upload the specified blob. For more information on Blob objects please see [Blob Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Blob).
                      * @method streams.create
                      * @example 
-                     baasicUserProfileAvatarService.streams.create('<file-id>', '<path'>, <blob>)
+                     baasicUserProfileAvatarService.streams.create('<file-id>', '<filename'>, <blob>)
                      .success(function (data) {
                      // perform success action here
                      })
@@ -1191,7 +1191,7 @@
                     create: function (id, data, stream) {
                         if (!angular.isObject(data)) {
                             data = {
-                                path: data
+                                filename: data
                             };
                         }
                         var params = angular.copy(data);
