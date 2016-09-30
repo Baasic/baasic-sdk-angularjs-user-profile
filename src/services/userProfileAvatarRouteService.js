@@ -23,7 +23,7 @@ baasicUserProfileAvatarRouteService.get.expand(
                 * @method        
                 * @example baasicUserProfileAvatarRouteService.link.expand({id: '<file-id>'});              
                 **/
-                link: uriTemplateService.parse('profiles/{id}/link'),
+                link: uriTemplateService.parse('profiles/{id}/avatars/link'),
 
                 streams: {
                     /**
