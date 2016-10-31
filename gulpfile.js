@@ -1,6 +1,7 @@
 /* jshint node: true */
 'use strict';
 var docgen = require('baasic-javascript-docgen');
+var injectVersion = require('gulp-inject-version');
 
 var gulp = require('gulp'),
 	plugins = require('gulp-load-plugins')(),
@@ -23,11 +24,12 @@ gulp.task('scripts', function() {
   return gulp.src(paths.scripts)
     .pipe(plugins.order(['*.moduleDefinition.js', '*.js']))
 	.pipe(plugins.concat('baasic-angularjs-user-profile.js'))
-	.pipe(plugins.header('(function (angular, undefined) {\n'))
+	.pipe(plugins.header('/*\n Baasic AngularJS User Profile %%GULP_INJECT_VERSION%%\n (c) 2014-2016 Mono http://baasic.com\n License: MIT\n*/\n(function (angular, undefined) {\n'))
 	.pipe(plugins.footer('\n})(angular);'))
+    .pipe(injectVersion())
 	.pipe(plugins.beautify())
 	.pipe(gulp.dest('dist'))
-	.pipe(plugins.uglify())
+	.pipe(plugins.uglify({output: {comments: /^!|License: MIT/i}}))
 	.pipe(plugins.rename('baasic-angularjs-user-profile.min.js'))
 	.pipe(gulp.dest('dist'));
 });
