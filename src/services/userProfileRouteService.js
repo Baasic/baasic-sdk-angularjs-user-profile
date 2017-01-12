@@ -1,7 +1,7 @@
 ﻿/* globals module */
 /**
  * @module baasicUserProfileRouteService
- * @description Baasic User Profile Route Service provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic User Profile Route Service to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
+ * @description Baasic User Profile Route Service provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic User Profile Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
 */
 (function (angular, module, undefined) {
     'use strict';
@@ -18,7 +18,7 @@
                 * @method        
                 * @example baasicUserProfileRouteService.find.expand({searchQuery: '<search-phrase>'});               
                 **/  			
-                find: uriTemplateService.parse("profiles/{?searchQuery,page,rpp,sort,embed,fields}"),
+                find: uriTemplateService.parse('profiles/{?searchQuery,page,rpp,sort,embed,fields}'),
                 /**
                 * Parses get route; this route doesn't expose any properties.
                 * @method        
@@ -30,7 +30,7 @@
                 * @method        
                 * @example baasicUserProfileRouteService.create.expand({});              
                 **/  				
-                create: uriTemplateService.parse("profiles"),               	
+                create: uriTemplateService.parse('profiles'),               	
                 /**
                 * Parses and expands URI templates based on [RFC6570](http://tools.ietf.org/html/rfc6570) specifications. For more information please visit the project [GitHub](https://github.com/Baasic/uritemplate-js) page.
                 * @method
@@ -39,7 +39,7 @@
                 parse: uriTemplateService.parse,
                 acl: {
 					/**
-					* Parses get user profile acl route; this URI template should be expanded with the Id of the user profile.					
+					* Parses get user profile acl route; this URI template should be expanded with the Id of the user profile resource.					
 					* @method acl.get       
 					* @example 
 baasicUserProfileRouteService.acl.get.expand(
@@ -58,7 +58,7 @@ baasicUserProfileRouteService.acl.update.expand(
                     update: uriTemplateService.parse('profiles/{id}/acl/{?fields}'),
 					/**
 					* Parses deleteByUser user profile acl route which can be expanded with additional options. Supported items are:
-					* - `id` - Id of the user profile.
+					* - `id` - Id of the user profile resource.
 					* - `accessAction` - Action abbreviation which identifies ACL policy assigned to the specified user and user profile resource.
 					* - `user` - A value which uniquely identifies user for which ACL policy needs to be removed.					
 					* @method acl.deleteByUser       

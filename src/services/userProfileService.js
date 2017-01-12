@@ -1,7 +1,7 @@
 ﻿/* globals module */
 /**
  * @module baasicUserProfileService
- * @description Baasic User Profile Service provides an easy way to consume Baasic User Profile REST API end-points. In order to obtain a needed routes `baasicUserProfileService` uses `baasicUserProfileRouteService`.
+ * @description Baasic User Profile Service provides an easy way to consume Baasic User Profile REST API end-points. In order to obtain needed routes `baasicUserProfileService` uses `baasicUserProfileRouteService`.
 */
 (function (angular, module, undefined) {
     'use strict';
@@ -106,12 +106,6 @@ baasicUserProfileService.remove(userProfile)
                     var params = baasicApiService.removeParams(data);
                     return baasicApiHttp.delete(params[baasicConstants.modelPropertyName].links('delete').href);
                 },                 
-                /**
-                * Provides direct access to `userProfileRouteService`.
-                * @method        
-                * @example baasicUserProfileService.routeService.get.expand(expandObject);
-                **/  							    
-				        routeService: userProfileRouteService,
                 acl: {
                     /**
                     * Returns a promise that is resolved once the get action has been performed. Success response returns a list of ACL policies established for the specified user profile resource.
@@ -190,7 +184,13 @@ baasicUserProfileService.acl.removeByRole('<profile-id>', '<access-action>', '<r
                         params.accessAction = action;
                         return baasicApiHttp.delete(userProfileRouteService.acl.deleteByRole.expand(params));
                     }
-                }
+                }, 
+                /**
+                * Provides direct access to `userProfileRouteService`.
+                * @method        
+                * @example baasicUserProfileService.routeService.get.expand(expandObject);
+                **/  							    
+				routeService: userProfileRouteService
             };
         }]);
 }(angular, module));
