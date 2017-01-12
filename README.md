@@ -1,6 +1,6 @@
 # Baasic User Profile AngularJS SDK
 
-Baasic AngularJS User Profile library provides access to [Baasic REST API](https://api.baasic.com/beta) user profile end-points.
+Baasic AngularJS User Profile library provides access to [Baasic REST API](http://dev.baasic.com/api/reference/home) user profile end-points.
 
 ## Dependencies
 
